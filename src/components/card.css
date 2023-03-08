@@ -1,0 +1,42 @@
+.individual-card{
+    /* border :1px solid black; */
+    width: 11rem;
+    height:13rem;
+    margin:1rem;
+    padding :1rem;
+    border-radius: 1rem;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+    inset 4px 4px 10px white;
+    background-color: white;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.individual-card:hover{
+    box-shadow:  inset 15px 20px 20px rgba(0,0,0,.3),  4px 4px 10px white;
+    transition: .2s;
+}
+
+.profile-pic{
+    width:7rem;
+    height:7rem;
+    border-radius: 50%;
+}
+
+.login-name{
+    color: #060047;
+    font-size: 1.5rem;
+    margin:0.5rem;
+}
+
+.viewprofile-btn{
+    background-color: #fd9ac2;
+    color: #060047;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-weight:500;
+}

@@ -1,21 +1,23 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { BASE_URL } from './constants';
- const useFetch = ()=>{
- const [data,setData]= useState([]);
- const [isLoading,setIsLoading] = useState(true)
+import paginate from './paginate'
 
- useEffect(()=>{
-    fetchData();
- },[])
+const useFetch = () => {
+   const [data, setData] = useState([]);
+   const [isLoading, setIsLoading] = useState(true)
 
- async function fetchData(){
-       const response = await fetch(BASE_URL);
-       const data = await response.json();
-      setData(data);
+   useEffect(() => {
+      getUsers();
+   }, [])
+
+   async function getUsers() {
+      const response = await fetch(BASE_URL);
+      const data = await response.json();
+      setData(paginate(data));
       setIsLoading(false)
- }
+   }
 
 
-    return {data,isLoading}
+   return { data, isLoading }
 }
 export default useFetch;
