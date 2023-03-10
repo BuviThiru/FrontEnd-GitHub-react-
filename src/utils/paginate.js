@@ -7,7 +7,6 @@ export default function paginate(followers){
     const newFollowers = Array.from({length:numberOFPages},(_,index)=>{
         const start = numberOFPages *index;
         return followers.slice(start,start+numberOfItemsPerPage)
-    })
-  
+    })  
     return newFollowers
 }
