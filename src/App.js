@@ -8,11 +8,11 @@ function App() {
   let { data, isLoading } = useFetch();
   let [page, setPage] = useState(0)
   let [followers, setFollowers] = useState([]);
-  console.log(data, followers)
-  console.log("PAGE",page)
+  // console.log(data, followers)
+  // console.log("PAGE",page)
   useEffect(() => {
     if (isLoading) return;
-    setFollowers(data[page])
+    setFollowers((data)=>data[page])
   }, [isLoading, page])
 
   function handlePrev() {
