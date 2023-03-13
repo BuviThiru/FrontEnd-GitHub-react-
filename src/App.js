@@ -12,8 +12,8 @@ function App() {
   // console.log("PAGE",page)
   useEffect(() => {
     if (isLoading) return;
-    setFollowers((data)=>data[page])
-  }, [isLoading, page])
+    setFollowers(()=>data[page])
+  }, [data,isLoading,page])
 
   function handlePrev() {
     setPage((prev) =>{
